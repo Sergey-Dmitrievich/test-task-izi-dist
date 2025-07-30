@@ -3,9 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>test-task-izi</title>
-    <base href="/test-task-izi/">
+    <base href="/test-task-izi-dist/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- GitHub Pages роутинг фикс -->
+    <script>
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      }(window.location))
+    </script>
+    
     <!-- Водяные знаки через мета-теги -->
     <meta name="author" content="Скворцов СД">
     <meta name="copyright" content="© 2025 Скворцов СД. All rights reserved">
@@ -41,7 +54,7 @@
       }
       body{
         background-color:#f3f3f3;
-        font-family:"Exo 2 Regular";
+        font-family:"Exo 2 Regular", Arial, sans-serif;
         font-size:18px
       }
       @font-face{
@@ -70,12 +83,12 @@
       "author": {
         "@type": "Person",
         "name": "Скворцов СД",
-        "email": "[ваш email]"
+        "email": "sergejskvorcov122@mail.ru"
       },
       "copyrightYear": "2025",
       "copyrightHolder": "Скворцов СД",
       "license": "Proprietary - Evaluation Only",
-      "identifier": "TT-2025-[hash]"
+      "identifier": "TT-2025-138hs35"
     }
     </script>
     
